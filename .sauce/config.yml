@@ -1,0 +1,123 @@
+apiVersion: v1alpha
+kind: cypress
+showconsolelog: false
+sauce:
+  region: eu-central-1
+  metadata:
+    name: Testing Cypress Support
+    tags:
+    - e2e
+    - release team
+    - other tag
+    build: Release $CI_COMMIT_SHORT_SHA
+  concurrency: 100
+cypress:
+  configFile: cypress.json
+  version: 5.6.0
+suites:
+  - name: "Cypress Chrome W10 800x600"
+    browser: "chrome"
+    screenResolution: "800x600"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1024x768"
+    browser: "chrome"
+    screenResolution: "1024x768"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1152x864"
+    browser: "chrome"
+    screenResolution: "1152x864"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1280x768"
+    browser: "chrome"
+    screenResolution: "1280x768"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1280x800"
+    browser: "chrome"
+    screenResolution: "1280x800"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1280x960"
+    browser: "chrome"
+    screenResolution: "1280x960"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1280x1024"
+    browser: "chrome"
+    screenResolution: "1280x1024"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1400x1050"
+    browser: "chrome"
+    screenResolution: "1400x1050"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1440x900"
+    browser: "chrome"
+    screenResolution: "1440x900"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1600x1200"
+    browser: "chrome"
+    screenResolution: "1600x1200"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1680x1050"
+    browser: "chrome"
+    screenResolution: "1680x1050"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1920x1080"
+    browser: "chrome"
+    screenResolution: "1920x1080"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 1920x1200"
+    browser: "chrome"
+    screenResolution: "1920x1200"
+    config:
+      testFiles: [ "**/*.*" ]
+
+  - name: "Cypress Chrome W10 2560x1600"
+    browser: "chrome"
+    screenResolution: "2560x1600"
+    config:
+      testFiles: [ "**/*.*" ]
+
+
+  #- name: "Cypress Chrome W10 1024x768"
+  #  browser: "chrome"
+  #  platformName: "Windows 10"
+  #  screenResolution: "1024x768"
+  #  config:
+  #    testFiles: [ "**/*.*" ] # Cypress native glob support.
+    # Available resolutions on Windows:
+    # - '800x600'
+    # - '1024x768'
+    # - '1152x864'
+    # - '1280x768'
+    # - '1280x800'
+    # - '1280x960'
+    # - '1280x1024'
+    # - '1400x1050'
+    # - '1440x900'
+    # - '1600x1200'
+    # - '1680x1050'
+    # - '1920x1080'
+    # - '1920x1200'
+    # - '2560x1600'
